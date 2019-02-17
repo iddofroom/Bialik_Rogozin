@@ -1,8 +1,8 @@
 # Bialik_Rogozin
 Human scale arcade machine - 800 leds(WS2812B) + 9 Bathroom Scale sensors = Fun games machine
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## תיאור המערכת
+ישנם 9 אבני חישה, אשר נבנו לפי המדריך בקישור הבא:
+* [hx711](https://www.instructables.com/id/Arduino-Bathroom-Scale-With-50-Kg-Load-Cells-and-H/) - The web framework used
 
 ### Prerequisites
 
