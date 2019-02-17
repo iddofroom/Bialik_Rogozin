@@ -1,12 +1,24 @@
 # Bialik_Rogozin
 Human scale arcade machine - 800 leds(WS2812B) + 9 Bathroom Scale sensors = Fun games machine
 ## תיאור המערכת
-ישנם 9 אבני חישה, אשר נבנו לפי המדריך בקישור הבא:
-* [hx711](https://www.instructables.com/id/Arduino-Bathroom-Scale-With-50-Kg-Load-Cells-and-H/) - The web framework used
 
+המיצב כולל מסך הבנוי מ800 משולשים אשר בכל אחד מהם יש נורת לד מכותבת.
+לפני המיצב יש 9 אבני חישה עם 24 לדים מכותבים בכל אחת
+יהאבני חישה, נבנו לפי המדריך בקישור הבא:
+* [hx711](https://www.instructables.com/id/Arduino-Bathroom-Scale-With-50-Kg-Load-Cells-and-H/) 
+האבנים מחוברת ל2 ארדויאנו נאנו - 6 מחבורות ל1 ועוד 3 מחוברות ל2
+שני בקרי הארדואינו נאנו מתקשרים בפרוטוקול 
+I2C 
+לבקר הטנסי ששולט בכל המערכת, בעזרת תוסף * [אוקטופס](https://www.arduino.cc/en/Main/Software) - ארדואינו
 ### Prerequisites
+ סביבת העבודה היא שפת סי בבקר ארדואינו נאנו ובקר טנסי 3.2
+ * [IDE arduino](https://www.arduino.cc/en/Main/Software) - ארדואינו
+ * [Teensyduino](https://www.arduino.cc/en/Main/Software) - תוסף לארדואינו להתקנות על הטנסי
 
-What things you need to install the software and how to install them
+
+ספריות
+ * [OctoWS2811]( https://github.com/PaulStoffregen/OctoWS2811) - ספריה שעובדת עם הלדים
+
 
 ```
 Give examples
