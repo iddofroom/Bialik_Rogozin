@@ -5,11 +5,12 @@ Human scale arcade machine - 800 leds(WS2812B) + 9 Bathroom Scale sensors = Fun 
 המיצב כולל מסך הבנוי מ800 משולשים אשר בכל אחד מהם יש נורת לד מכותבת.
 לפני המיצב יש 9 אבני חישה עם 24 לדים מכותבים בכל אחת
 יהאבני חישה, נבנו לפי המדריך בקישור הבא:
-* [hx711](https://www.instructables.com/id/Arduino-Bathroom-Scale-With-50-Kg-Load-Cells-and-H/) 
+[hx711](https://www.instructables.com/id/Arduino-Bathroom-Scale-With-50-Kg-Load-Cells-and-H/) 
 האבנים מחוברת ל2 ארדויאנו נאנו - 6 מחבורות ל1 ועוד 3 מחוברות ל2
 שני בקרי הארדואינו נאנו מתקשרים בפרוטוקול 
 I2C 
-לבקר הטנסי ששולט בכל המערכת, בעזרת תוסף * [אוקטופס](https://www.arduino.cc/en/Main/Software) - ארדואינו
+לבקר הטנסי ששולט בכל המערכת, בעזרת תוסף 
+[אוקטו](https://www.pjrc.com/teensy/td_libs_OctoWS2811.html) 
 ### Prerequisites
  סביבת העבודה היא שפת סי בבקר ארדואינו נאנו ובקר טנסי 3.2
  * [IDE arduino](https://www.arduino.cc/en/Main/Software) - ארדואינו
