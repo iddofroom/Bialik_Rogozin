@@ -1,28 +1,10 @@
-/*
- Example using the SparkFun HX711 breakout board with a scale
- By: Nathan Seidle
- SparkFun Electronics
- Date: November 19th, 2014
- License: This code is public domain but you buy me a beer if you use this and we meet someday (Beerware license).
- This example demonstrates basic scale output. See the calibration sketch to get the calibration_factor for your
- specific load cell setup.
- This example code uses bogde's excellent library:  https://github.com/bogde/HX711
 
- bogde's library is released under a GNU GENERAL PUBLIC LICENSE
- The HX711 does one thing well: read load cells. The breakout board is compatible with any wheat-stone bridge
- based load cell which should allow a user to measure everything from a few grams to tens of tons.
- Arduino pin 2 -> HX711 CLK
- 3 -> DAT
- 5V -> VCC
- GND -> GND
- The HX711 board can be powered from 2.7V to 5V so the Arduino 5V power should be fine.
-*/
 #include <Wire.h>
 #include "HX711.h"
 ///////////////////////////////////////
 #define calibration_factor -14050.0 //This value is obtained using the SparkFun_HX711_Calibration sketch
-#define minw  1
-#define maxw  20
+#define minw  0.2   // change this value of cell load have lot of noice
+#define maxw  20 // same as value before
 #define sensors  6
 #define DOUT4  5
 #define CLK4  4
@@ -90,7 +72,7 @@ void loop() {
       { stons[k] = false;
         if ( abs(history[k][0]-history[k][1])>minw && abs(history[k][0]-history[k][1])<maxw && abs(history[k][1]-history[k][2])>minw && abs(history[k][1]-history[k][2])<maxw && abs(history[k][0]-history[k][2])>minw && abs(history[k][0]-history[k][2])<maxw )
         {stons[k]=true;Serial.println("-------------------------");}}       
-delay(500);
+delay(100);
 }
 void requestEvent() {
   for (int l=0; l<sensors;l++)
