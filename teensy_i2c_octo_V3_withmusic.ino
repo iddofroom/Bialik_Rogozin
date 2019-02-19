@@ -53,7 +53,7 @@ void loop() {
   Serial.println();
 }
 void simon_say(){
-  sendmusic(1,1);
+  sendmusic(0,9);
   startani();
   int level = 0;
   randomizer();
@@ -77,7 +77,7 @@ void simon_say(){
          {stepsniff();}
       if ( whatstep() != turnlist[lev])
       {
-            sendmusic(1,2);
+            sendmusic(0,9);
        loseani();
        gameon=false;
        Serial.println( whatstep()); 
@@ -86,7 +86,9 @@ void simon_say(){
        break; 
        }
        else
-       {shortani(turnlist[lev]);}      
+       {            
+        sendmusic(0,(turnlist[lev]));
+        shortani(turnlist[lev]);}      
     }
     if (gameon){
           sendmusic(1,3);
